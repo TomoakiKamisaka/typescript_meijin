@@ -1,5 +1,5 @@
 
-interface person{
+export interface person{
     //プロパティ
         name: string;
         age: number;
@@ -10,13 +10,13 @@ interface person{
 
 }
 
-class worker implements person{
+class Worker implements person{
     //プロパティ
         private _name: string = "";
         private _age: number = 0;
         private _married: boolean = true;
     //コンストラクター
-        constructor(name :string, age: number, married: true){
+        constructor(name :string, age: number, married: boolean){
             this.name = name;
             this.age = age;
             this.married = married;
@@ -40,11 +40,11 @@ class worker implements person{
         }
     //メソッド
         speak():void{
-            console.log("わたしは上坂 友了です")
+            console.log(`わたしは${this.name}です`)
         }
 }
 
-const Tomoaki:worker = new worker("Tomoaki",28,true);
+const Tomoaki:Worker = new Worker("Tomoaki",28,true);
 console.log(Tomoaki.name);
 console.log(Tomoaki.speak());
 

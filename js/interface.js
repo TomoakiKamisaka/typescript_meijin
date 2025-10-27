@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-class worker {
+class Worker {
     //プロパティ
     _name = "";
     _age = 0;
@@ -29,9 +29,9 @@ class worker {
     }
     //メソッド
     speak() {
-        console.log("わたしは上坂 友了です");
+        console.log(`わたしは${this.name}です`);
     }
 }
-const Tomoaki = new worker("Tomoaki", 28, true);
+const Tomoaki = new Worker("Tomoaki", 28, true);
 console.log(Tomoaki.name);
 console.log(Tomoaki.speak());
